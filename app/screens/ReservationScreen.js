@@ -10,27 +10,27 @@ const ReservationScreen = ({ route }) => {
   const navigation = useNavigation();
   const { facility } = route.params;
   const [name, setName] = useState('');
-  const [date, setDate] = useState();
+  const [date, setDate] = useState('');
   const [showDatePickerDate, setShowDatePickerDate] = useState(false);
-  const [startTime, setStartTime] = useState();
+  const [startTime, setStartTime] = useState('');
   const [showDatePickerStartTime, setShowDatePickerStartTime] = useState(false);
-  const [endTime, setEndTime] = useState();
+  const [endTime, setEndTime] = useState('');
   const [showDatePickerEndTime, setShowDatePickerEndTime] = useState(false);
 
   const handleDateChange = (event, selectedDate) => {
-    const currentDate = selectedDate || date;
+    const currentDate = selectedDate;
     setShowDatePickerDate(false);
     setDate(currentDate);
   };
 
   const handleStartTimeChange = (event, selectedDate) => {
-    const currentDate = selectedDate || date;
+    const currentDate = selectedDate;
     setShowDatePickerStartTime(false);
     setStartTime(currentDate);
   };
 
   const handleEndTimeChange = (event, selectedDate) => {
-    const currentDate = selectedDate || date;
+    const currentDate = selectedDate;
     setShowDatePickerEndTime(false);
     setEndTime(currentDate);
   };
@@ -78,7 +78,7 @@ const ReservationScreen = ({ route }) => {
         {showDatePickerDate && (
           <DateTimePicker
             testID="dateTimePicker1"
-            value={date}
+            value={date ? date : new Date()}
             mode="date"
             is24Hour={true}
             display="default"
@@ -95,7 +95,7 @@ const ReservationScreen = ({ route }) => {
         {showDatePickerStartTime && (
           <DateTimePicker
             testID="dateTimePicker2"
-            value={startTime}
+            value={startTime ? startTime : new Date()}
             mode="time"
             is24Hour={true}
             display="default"
@@ -112,7 +112,7 @@ const ReservationScreen = ({ route }) => {
         {showDatePickerEndTime && (
           <DateTimePicker
             testID="dateTimePicker3"
-            value={endTime}
+            value={endTime ? endTime : new Date()}
             mode="time"
             is24Hour={true}
             display="default"
