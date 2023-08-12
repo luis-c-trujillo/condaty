@@ -16,13 +16,13 @@ Asegúrate de tener instalados en tu computadora:
 
 ## Instrucciones de Uso
 
-1. Clona este repositorio o descarga el código.
+1. Clona este repositorio o descarga el código: git clone https://ruta-del-repositiorio
 
 2. Abre una terminal y navega hasta la carpeta del proyecto: cd ruta/del/proyecto
 
 3. Instala las dependencias ejecutando el siguiente comando: npm install
 
-4. Inicia la aplicación utilizando Expo: expo start
+4. Inicia la aplicación utilizando Expo: npx expo start
 
 5. Una vez que Expo esté listo, escanea el código QR con la aplicación "Expo Go" en tu dispositivo móvil o utiliza un emulador para ver la aplicación en acción.
 
